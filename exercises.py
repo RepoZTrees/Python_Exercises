@@ -1,6 +1,6 @@
 # This is a master file for all Python exrcises.
 
-#Tables
+# Q1 Tables
 
 def tables(m, n):
     for a in range(m, m+1):
@@ -9,11 +9,11 @@ def tables(m, n):
             print(f"{a} * {i} = {b}")
 #tables(3,10)
 
-# Calculations function
+# Q2
 
-def add(a, b):
-    return a+b
-#add(2, 3)
+# Q3
+
+# Q4
 
 # Q5 FizBizz
 
