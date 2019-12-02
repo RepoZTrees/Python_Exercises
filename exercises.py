@@ -6,3 +6,8 @@ def tables(m, n):
             b = a*i
             print(f"{a} * {i} = {b}")
 tables(3,10)
+
+def add(a, b):
+    return a+b
+
+add(2, 3)
