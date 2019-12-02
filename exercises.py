@@ -1,4 +1,10 @@
 # This is a master file for all Python exrcises.
+# To add changes for commit/once you made your local commits, you can then push it to your remote GitHub.
+   # git add .
+   # git commit -m "write some message"
+   # git push
+   
+#---------------
 
 # Q1 Tables
 
