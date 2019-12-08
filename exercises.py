@@ -3,29 +3,120 @@
    # git add .
    # git commit -m "write some message"
    # git push
-   
-#---------------
 
-# Q1 Tables
+# To run this module from bash:
+# $ python3
+# >>>import module /module means filename.py file
+# >>>filename.module /function name
+
+#---------------*******-----------------*****----------------
+
+# Q1 Return number of digits in number
+
+def digits(n):
+    a = str(n)
+    print(a)
+    print(len(a))
+#digits(n)
+
+#Q1a. evenOdd function
+def evenOdd(x):
+    if(x % 2 == 0):
+        print("Even")
+    else:
+        print("Odd")
+#evenOdd(x)
+
+# Q2 - Return number of words in a sensentence
+
+def words(s):
+    a = s.split(" ")
+    print(a)
+    #"Returns number of words in sentences"
+    return len(a)
+#words(s)
+
+# Q2a - Return number of letters in a sentence
+
+def letters(s):
+    a = list(s)
+    print(a)
+    return len(a)
+#letters(s) 
+        
+
+# Q3 Tables
+#tables(3,10)
+# 3 * 1 = 3
+# 3 * 2 = 6
+# 3 * 3 = 9
+# 3 * 4 = 12
+# .
+# .
+# .
+# 3 * 10 = 30
 
 def tables(m, n):
     for a in range(m, m+1):
         for i in range(1, n+1):
             b = a*i
             print(f"{a} * {i} = {b}")
-#tables(3,10)
-
-# Q2
-
-# Q3
+#tables(m,n)
 
 # Q4
+# tables2(5)
+# 1 2 3 4 5
+# 2 4 6 8 10
+# 3 6 9 12 15
+# 4 8 12 16 20
+# 5 10 15 20 25
+
+# Logic for the above table:
+# | i | j | i*j | q   | row |
+# |---+---+-----+-----+-----+
+# | 1 | 1 | 1   | '1' | ['1']
+# | 1 | 2 | 2   | '2' | ['1','2']
+# | 1 | 3 | 3   | '3' | ['1','2','3']
+# | 1 | 4 | 4   | '4' | ['1',2','3','4']
+# | 1 | 5 | 5   | '5' | ['1','2','3','4','5']
+# | 2 | 1 | 2   | '2' | ['2']
+# | 2 | 2 | 4   | '4' | ['2','4']
+# | 2 | 3 | 6   | '6" | ['2','4','6']
+
+
+def tables2(n):
+    for i in range(1,n+1):
+        for j in range(1,n+1):
+            print (f"{i*j}", end="  ")
+        print()
+    print()
+#tables2()
+        
 
 # Q5 FizBizz
+# Write a function fizzbizz that takes a number n as input
+# It should print numbers from 1 to n with the following rules.
+# 1. If it's a multiple of 3, it should print fizz
+# 2. If it's a multiple of 5, it should print bizz
+# 3. If it's a multiple of 15, it should print fizzbizz
+# 4. Otherwise, it should just print the number.
+# Example output:
+# fizzbizz(15)
+# should print
+# 1
+# 2
+# fizz
+# 4
+# bizz
+# fizz
+# .
+# .
+# .
+# 13
+# 14
+# fizzbizz
 
-#n = input("Enter the number >" )
-#print(f"you entered {n}")
-        
+# modulo operator
 def fizzbizz(o):
     for i in range(1, o+1):
         if i%15 == 0:
@@ -36,5 +127,48 @@ def fizzbizz(o):
             print('bizz') 
         else:
             print(f"{i}")
+#fizzbizz(o)
 
-fizzbizz(int(input("Enter the number> ")))
+#Q6 Write a program biggest which will retrun the largest element of a
+# list of numbers
+# e.g.
+#     biggest ([1,5,9,20,7,-5,23,4,12])
+# will return
+#     23
+
+#Q7 Write a program biggest2 which will return the largest 2 elements of
+# a list of numbers
+# e.g.
+#    biggest2([1,5,9,20,7,-5,23,4,12])
+# will return
+#    [20,23]
+
+
+#Q8 A panagram is a sentence that contains all letters of the alphabet.
+# e.g. ' The quick brown fox jumps over the lazy dog'
+# Implement a function called 'panagram' which takes a string s as input
+# and will return True if s is a panagram and False if not.
+# e.g.
+#panagram("the quick brown fox jumps over the lazy dog") # > True
+#panagram("the quick brown fox jumped over the lazy dog") # > False
+# "sphinx" of black quartz, judge my vow"
+
+def panagram(s):
+#"Will return True if s is a panagram. False otherwise"
+#s = "the quick brown fox jumps over the lazy dog"
+
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    for i in alphabet:
+        if i not in s.lower():
+            return False
+    return True
+
+# Q9 Write a function called "freq" which will take a string s as
+# input and return a dictionary that contains the number of times each
+#letter occurs  in s.
+#e.g. freq("six sick sheep") will return:
+# {'s':3, ' ':2, 'e':2,'i':2, 'c':1, 'h':1, 'k':1, 'p':1, 'x':1}
+
+
+
+
