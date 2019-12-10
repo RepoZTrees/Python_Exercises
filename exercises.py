@@ -8,6 +8,7 @@
 # $ python3
 # >>>import module /module means filename.py file
 # >>>filename.module /function name
+# Select line, Select word, Select Sentence, Select Paragraph
 
 #---------------*******-----------------*****----------------
 
@@ -135,6 +136,18 @@ def fizzbizz(o):
 #     biggest ([1,5,9,20,7,-5,23,4,12])
 # will return
 #     23
+#-----***------
+
+def biggest(l):
+    biggest_num = l[0]
+    for i in l:
+        if i > biggest_num:
+            biggest_num = i
+   # print(f"the biggest number is:{biggest_num}")
+    return biggest_num
+
+#biggest(l)
+
 
 #Q7 Write a program biggest2 which will return the largest 2 elements of
 # a list of numbers
@@ -142,6 +155,27 @@ def fizzbizz(o):
 #    biggest2([1,5,9,20,7,-5,23,4,12])
 # will return
 #    [20,23]
+
+def biggest2(l):
+    numbers = l
+    if numbers[0]>numbers[1]:
+        largest, second_largest = numbers[0], numbers[1]
+        #print(largest, second_largest)
+    else:
+        largest, second_largest = numbers[1], numbers[0]
+        #print(largest, second_largest)
+
+    for i in numbers[2:]:
+        if i>second_largest:
+            if i>largest:
+                second_largest, largest = largest, i
+                #print(second_largest, largest)
+            else:
+                second_largest = i
+                #print(second_largest)
+            #print(second_largest, largest)
+    return second_largest, largest
+
 
 
 #Q8 A panagram is a sentence that contains all letters of the alphabet.
