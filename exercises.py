@@ -1,6 +1,7 @@
 # This is a master file for all Python exrcises.
 # To add changes for commit/once you made your local commits, you can then push it to your remote GitHub.
-   # git add .
+   # git add . # Will add all the files from the folder
+   # git add filename # Will add only those files
    # git commit -m "write some message"
    # git push
 
@@ -9,6 +10,7 @@
 # >>>import module /module means filename.py file
 # >>>filename.module /function name
 # Select line, Select word, Select Sentence, Select Paragraph
+#
 
 #-------------*******-----------------*****----------------
 
