@@ -10,7 +10,7 @@
 # >>>filename.module /function name
 # Select line, Select word, Select Sentence, Select Paragraph
 
-#---------------*******-----------------*****----------------
+#-------------*******-----------------*****----------------
 
 # Q1 Return number of digits in number
 
@@ -203,6 +203,35 @@ def panagram(s):
 #e.g. freq("six sick sheep") will return:
 # {'s':3, ' ':2, 'e':2,'i':2, 'c':1, 'h':1, 'k':1, 'p':1, 'x':1}
 
+"""
+Logic:
 
+{'s': 1}
+{'s': 1, 'i': 1}
+{'s': 1, 'i': 1, 'c': 1}
+{'s': 1, 'i': 1, 'c': 1, 'k': 1}
+{'s': 1, 'i': 1, 'c': 1, 'k': 1, ' ': 1}
+{'s': 2, 'i': 1, 'c': 1, 'k': 1, ' ': 1}
+{'s': 2, 'i': 2, 'c': 1, 'k': 1, ' ': 1}
+{'s': 2, 'i': 2, 'c': 1, 'k': 1, ' ': 1, 'x': 1}
+{'s': 2, 'i': 2, 'c': 1, 'k': 1, ' ': 2, 'x': 1}
+{'s': 3, 'i': 2, 'c': 1, 'k': 1, ' ': 2, 'x': 1}
+{'s': 3, 'i': 2, 'c': 1, 'k': 1, ' ': 2, 'x': 1, 'h': 1}
+{'s': 3, 'i': 2, 'c': 1, 'k': 1, ' ': 2, 'x': 1, 'h': 1, 'e': 1}
+{'s': 3, 'i': 2, 'c': 1, 'k': 1, ' ': 2, 'x': 1, 'h': 1, 'e': 2}
+{'s': 3, 'i': 2, 'c': 1, 'k': 1, ' ': 2, 'x': 1, 'h': 1, 'e': 2, 'p': 1}
+'s':3 'i':2 ' ':2 'e':2 >>> 
+"""
 
+def freq(s):
+    count = {}
+    for i in s:
+        if i in count:
+            count[i] += 1
+        else:
+            count[i] = 1
+        #print(count) / will print the logic table
 
+    for key in count:
+        if count[key] > 1:
+            print (f"'{key}':{count[key]}",end=" ")
