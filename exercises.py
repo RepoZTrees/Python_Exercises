@@ -237,3 +237,16 @@ def freq(s):
     for key in count:
         if count[key] > 1:
             print (f"'{key}':{count[key]}",end=" ")
+
+# Q10 Write a function 'breakdown' which will take an amount as an input and
+# give the breakdown of number of currency notes required.
+# We have 2000, 500, 200,100, 50, 20, 10, 5, 2, 1 notes in denominations.
+
+def breakdown(amt):
+    denominations = [2000,500,200,100,50,20,10,5,2,1]
+    for denomination in denominations:
+        number_of_notes = amt // denomination
+        sub_amount = number_of_notes * denomination
+        amt = amt - sub_amount
+        if number_of_notes >= 1:
+            print(f'\t{denomination}\t* {number_of_notes} = {sub_amount}')
