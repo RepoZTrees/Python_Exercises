@@ -249,4 +249,4 @@ def breakdown(amt):
         sub_amount = number_of_notes * denomination
         amt = amt - sub_amount
         if number_of_notes >= 1:
-            print(f'\t{denomination}\t* {number_of_notes} = {sub_amount}')
+            print(f'\t{denomination:4}  *{number_of_notes:4} = {sub_amount:5}')
