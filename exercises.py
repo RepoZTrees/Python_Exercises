@@ -57,6 +57,7 @@ def letters(s):
 # .
 # .
 # .
+# .
 # 3 * 10 = 30
 
 def tables(m, n):
@@ -250,3 +251,35 @@ def breakdown(amt):
         amt = amt - sub_amount
         if number_of_notes >= 1:
             print(f'\t{denomination:4}  *{number_of_notes:4} = {sub_amount:5}')
+
+# Q11 Write a function 'triangle' and 'reverse_triangle' which will read a number and print a triangle using "*"
+#Eg:                                                                                                                                                                                
+#input: 5                                                                                                  
+#-----Output-----                                                                                                                                                                   
+#*
+#**  
+#***                                                                                                                                                                                
+#****                                                                                                                                                                               
+#*****                                                                                                                                                                              
+
+def triangle(n):
+    stars = 0
+    for r in range(1,n+1):
+        stars = stars + 1
+        print(f'*' * stars)
+
+
+# Write a function to read a number and print a triangle in reverse order.                                                                                                          
+#-----Output-----                                                                                                                                                                   
+#*****                                                                                                                                                                              
+#****                                                                                                                                                                               
+#***                                                                                                                                                                                
+#**                                                                                                                                                                                 
+#*
+
+def reverse_triangle(n):
+    stars = n
+    for r in range(1,n+1):
+        print(f'*' * stars)
+        stars = stars - 1
+        #print(f'*' * stars)                                                                                                                                           
