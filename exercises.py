@@ -325,7 +325,7 @@ def word_count():
 #        2. Combine it using i
 #        3. Push the result back onto the stack
 #  2. The stack will contain a single number which is the result
-# $python3, import filename.py, filename.evaluate("32+")
+# $python3, >>>import filename, >>>filename.evaluate("32+")
 
 #evaluate("32+")
 
