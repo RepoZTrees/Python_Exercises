@@ -309,5 +309,55 @@ def word_count():
 #word_count()
 
 
+# Q13.Write a function `evaluate` which will receive a string `s` as
+# input. `s` will be a postfix expression. All the numbers in the
+# expression will be single digits.
+# `evaluate` should evaluate `s` and return the result
+# e.g. 
+# evaluate("32+")
+# should return 
+# 5
+#  Algorithm
+#  1. For each element `i` in `s`
+#     1. If i is an operand (a number), push it onto the stack
+#     2. If i is an operator
+#        1. pop 2 numbers from the stack
+#        2. Combine it using i
+#        3. Push the result back onto the stack
+#  2. The stack will contain a single number which is the result
+# $python3, import filename.py, filename.evaluate("32+")
 
-#Q13 
+#evaluate("32+")
+
+def evaluate(s):
+    list1 = []
+    l = "0123456789"
+    
+    for i in s:                                                                
+        if i in l:
+            list1.append(int(i))
+        else:
+            if i == "+":
+                a = list1.pop()
+                b = list1.pop()
+                c = int(a) + int(b)
+                list1.append(c)
+
+            elif i == "*":
+                a = list1.pop()
+                b = list1.pop()
+                c = int(a) * int(b)
+                list1.append(c)
+
+            elif i == "-":
+                a = list1.pop()
+                b = list1.pop()
+                c = int(a) - int(b)
+                list1.append(c)
+
+            else:
+                a = list1.pop()
+                b = list1.pop()
+                c = int(a) // int(b)
+                list1.append(c)
+    return list1
