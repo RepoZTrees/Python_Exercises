@@ -282,4 +282,32 @@ def reverse_triangle(n):
     for r in range(1,n+1):
         print(f'*' * stars)
         stars = stars - 1
-        #print(f'*' * stars)                                                                                                                                           
+        #print(f'*' * stars)
+
+#Q12 Write a program/function called 'word_count'. Whatever 'wc' command in Linux would do,
+#it would do by executing Python file. It's a command line argument.
+#It should print a number of words, lines, and character of a file.
+#for e.g.input: python3 word_count.py wc.py would git the output: 5  13  25  wc.py. 
+
+from sys import argv
+
+script, file_name = argv #script(script being another name for your .py files)  
+
+def word_count():
+
+        txt = open(file_name, 'r')
+        s = txt.read()
+        lines = s.split('\n')
+        line_count = lines
+        line_count = len(line_count)
+        words = s.split(' ')
+        word_count = words
+        word_count = len(word_count)
+        char_count = len(s)
+        print(f'\t{line_count}\t{word_count}\t{char_count}\t{file_name}')
+
+#word_count()
+
+
+
+#Q13 
