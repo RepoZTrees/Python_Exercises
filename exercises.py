@@ -308,7 +308,43 @@ def word_count():
 
 #word_count()
 
+#Following code is an another version of the above question (Q12) with
+#total_line_count, total_word_count and total_characters_count.
+# for e.g.:let's say there are following 3 files in a folder.
+# $ python3 exercises.py *.* #will print the following output.  
+# 100  50  125  file_name1.py
+#  50 100   50  file_name2.py
+#  50  25  100  file_name3.txt
+# 200  175 275  total
 
+from sys import argv
+
+script = argv[0]
+file_names = argv[1:] #script(script being another name for your .py files)     
+
+def word_count(fname):
+        txt = open(fname, 'r')
+        s = txt.read()
+        lines = s.split('\n')
+        line_count = lines
+        line_count = len(line_count)
+        words = s.split(' ')
+        word_count = words
+        word_count = len(word_count)
+        char_count = len(s)
+        return line_count, word_count, char_count
+        #print(f'\t{line_count}\t{word_count}\t{char_count}\t{fname}')`         
+
+tlc = twc = tcc = 0
+for i in file_names:
+        lc, wc, cc = word_count(i)
+        print(f'\t{lc}\t{wc}\t{cc}\t{i}')
+        tlc += lc
+        twc += wc
+        tcc += cc
+if len(file_names) > 1:
+        print(f'\t{tlc}\t{twc}\t{tcc}\ttotal')
+        
 # Q13.Write a function `evaluate` which will receive a string `s` as
 # input. `s` will be a postfix expression. All the numbers in the
 # expression will be single digits.
