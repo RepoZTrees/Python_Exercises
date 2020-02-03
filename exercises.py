@@ -30,6 +30,8 @@ def evenOdd(x):
         print("Odd")
 #evenOdd(x)
 
+#----------
+
 # Q2 - Return number of words in a sensentence
 
 def words(s):
@@ -47,6 +49,7 @@ def letters(s):
     return len(a)
 #letters(s) 
         
+#----------
 
 # Q3 Tables
 #tables(3,10)
@@ -66,6 +69,8 @@ def tables(m, n):
             b = a*i
             print(f"{a} * {i} = {b}")
 #tables(m,n)
+
+#----------
 
 # Q4
 # tables2(5)
@@ -96,6 +101,7 @@ def tables2(n):
     print()
 #tables2()
         
+#----------
 
 # Q5 FizBizz
 # Write a function fizzbizz that takes a number n as input
@@ -133,13 +139,14 @@ def fizzbizz(o):
             print(f"{i}")
 #fizzbizz(o)
 
+#----------
+
 #Q6 Write a program biggest which will retrun the largest element of a
 # list of numbers
 # e.g.
 #     biggest ([1,5,9,20,7,-5,23,4,12])
 # will return
 #     23
-#-----***------
 
 def biggest(l):
     biggest_num = l[0]
@@ -151,6 +158,7 @@ def biggest(l):
 
 #biggest(l)
 
+#----------
 
 #Q7 Write a program biggest2 which will return the largest 2 elements of
 # a list of numbers
@@ -179,7 +187,7 @@ def biggest2(l):
             #print(second_largest, largest)
     return second_largest, largest
 
-
+#----------
 
 #Q8 A panagram is a sentence that contains all letters of the alphabet.
 # e.g. ' The quick brown fox jumps over the lazy dog'
@@ -199,6 +207,8 @@ def panagram(s):
         if i not in s.lower():
             return False
     return True
+
+#----------
 
 # Q9 Write a function called "freq" which will take a string s as
 # input and return a dictionary that contains the number of times each
@@ -239,6 +249,8 @@ def freq(s):
         if count[key] > 1:
             print (f"'{key}':{count[key]}",end=" ")
 
+#----------
+
 # Q10 Write a function 'breakdown' which will take an amount as an input and
 # give the breakdown of number of currency notes required.
 # We have 2000, 500, 200,100, 50, 20, 10, 5, 2, 1 notes in denominations.
@@ -251,6 +263,9 @@ def breakdown(amt):
         amt = amt - sub_amount
         if number_of_notes >= 1:
             print(f'\t{denomination:4}  *{number_of_notes:4} = {sub_amount:5}')
+
+
+#----------
 
 # Q11 Write a function 'triangle' and 'reverse_triangle' which will read a number and print a triangle using "*"
 #Eg:                                                                                                                                                                                
@@ -283,6 +298,8 @@ def reverse_triangle(n):
         print(f'*' * stars)
         stars = stars - 1
         #print(f'*' * stars)
+
+#----------
 
 #Q12 Write a program/function called 'word_count'. Whatever 'wc' command in Linux would do,
 #it would do by executing Python file. It's a command line argument.
@@ -344,7 +361,9 @@ for i in file_names:
         tcc += cc
 if len(file_names) > 1:
         print(f'\t{tlc}\t{twc}\t{tcc}\ttotal')
-        
+
+#----------
+
 # Q13.Write a function `evaluate` which will receive a string `s` as
 # input. `s` will be a postfix expression. All the numbers in the
 # expression will be single digits.
@@ -397,3 +416,23 @@ def evaluate(s):
                 c = int(a) // int(b)
                 list1.append(c)
     return list1
+
+#----------
+
+#Q14. Write a function which will print the following pattern
+
+# o ....
+# oo ...
+# ooo ..
+# oooo .
+# ooooo 
+
+def pattern(r,c):
+    for i in range(1,r+1):
+        for j in range(1,c+1):
+            print('o'*j, '.'*(c-1))
+            c=c-1
+        return c
+
+#a = pattern(5,5)
+#print(a)
