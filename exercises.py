@@ -300,7 +300,7 @@ def reverse_triangle(n):
         #print(f'*' * stars)
 
 #----------
-
+"""
 #Q12 Write a program/function called 'word_count'. Whatever 'wc' command in Linux would do,
 #it would do by executing Python file. It's a command line argument.
 #It should print a number of words, lines, and character of a file.
@@ -361,7 +361,7 @@ for i in file_names:
         tcc += cc
 if len(file_names) > 1:
         print(f'\t{tlc}\t{twc}\t{tcc}\ttotal')
-
+"""
 #----------
 
 # Q13.Write a function `evaluate` which will receive a string `s` as
@@ -419,7 +419,7 @@ def evaluate(s):
 
 #----------
 
-#Q14. Write a function which will print the following pattern
+#Q14a. Write a function which will print the following pattern
 
 # o ....
 # oo ...
@@ -436,3 +436,16 @@ def pattern(r,c):
 
 #a = pattern(5,5)
 #print(a)
+
+#Q14b
+def pattern(n):
+    for i in range(1,n+1):
+        for j in range(1,n+1):
+            print('o'*j, '.'*(n-1))
+            n=n-1
+        return n
+        
+#p = pattern(5)
+#print(p)
+
+#----------
